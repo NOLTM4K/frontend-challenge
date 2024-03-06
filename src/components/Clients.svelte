@@ -12,6 +12,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        text-align: center;
         gap: 56px;
         
     }
@@ -21,7 +22,7 @@
         font-style: normal;
         font-size: 36px;
         line-height: 56px;
-        text-align: center;
+
     }
 
     .logos {

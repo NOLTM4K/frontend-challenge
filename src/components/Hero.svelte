@@ -29,6 +29,18 @@
         font-style: normal;
     }
 
+    .heading {
+        font-size: 60px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+
+    .supporting-text {
+        font-size: 20px;
+        line-height: 100%;
+        color: #6B7280;
+    }
+
     .hero-image-container {
         width: 630px;
         height: 630px;
@@ -92,24 +104,14 @@
         border: 1px solid #D1D5DB;
     }
 
-    h1 {
-        font-size: 60px;
-        font-weight: 400;
-        line-height: 100%;
-    }
 
-    p {
-        font-size: 20px;
-        line-height: 100%;
-        color: #6B7280;
-    }
 
 </style>
 
 <div class="hero-container">
     <div class="hero-content-container">
-        <h1>We invest in the world's potential</h1>
-        <p>Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+        <h1 class="heading">We invest in the world's potential</h1>
+        <p class="supporting-text">Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
         <div class="btn-container">
             <button class="btn btn-blue">
                 Learn more
