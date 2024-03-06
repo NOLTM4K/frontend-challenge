@@ -57,7 +57,7 @@
 </style>
 
 <div class="clients-container">
-    <h1 class="heading">You'll be in good company </h1>
+    <h2 class="heading">You'll be in good company </h2>
     <div class="logos">
         <img src={google} alt="Google logo" class="logo" />
         <img src={microsoft} alt="Microsoft logo" class="logo" />

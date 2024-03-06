@@ -69,7 +69,7 @@
 
 <div class="introduction-container">
     <div class="introduction-content">
-        <h1 class="heading">We didn't reinvent the wheel</h1>
+        <h2 class="heading">We didn't reinvent the wheel</h2>
         <p class="supporting-text">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
     </div>
     <div class="image-row-1">

@@ -115,15 +115,15 @@
         <div class="btn-container">
             <button class="btn btn-blue">
                 Learn more
-                <img src={arrowRight} alt="learn more arrow icon" />
+                <img src={arrowRight} alt="Learn more arrow icon" />
             </button>
             <button class="btn btn-clear">
-                <img src={camera} alt="watch video camera icon" />
+                <img src={camera} alt="Watch video camera icon" />
                 Watch video
             </button>
         </div>
     </div>
     <div  class="hero-image-container">
-        <img src={characters} alt="two stylistic clay people constructing a clay 3D web page" class="flex-image"/>
+        <img src={characters} alt="Two stylistic clay people constructing a clay 3D web page" class="flex-image"/>
     </div>
 </div>

@@ -79,7 +79,7 @@
 
 <div class="features-container">
     <div class="heading-container">
-        <h1 class="heading">Designed for business teams like yours</h1>
+        <h2 class="heading">Designed for business teams like yours</h2>
         <p class="supporting-text">Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
     </div>
     <div class="features-row">
