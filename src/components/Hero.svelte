@@ -101,7 +101,7 @@
     p {
         font-size: 20px;
         line-height: 100%;
-        opacity: 0.6;
+        color: #6B7280;
     }
 
 </style>
