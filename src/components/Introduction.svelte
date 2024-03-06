@@ -44,7 +44,7 @@
         grid-template-columns: 50% 25% 25%;
         height: 240px;
         max-width: 1280px;
-        gap: 10px;
+        grid-gap: 10px;
         justify-content: center;
         align-items: center;
     }
@@ -54,14 +54,16 @@
         grid-template-columns: 25% 50% 25%;
         height: 240px;
         max-width: 1280px;
-        gap: 10px;
+        grid-gap: 10px;
         justify-content: center;
         align-items: center;
     }
 
     img {
         height: 240px;
+        width: 100%;
         object-fit: cover;
+        border-radius: 8px;
     }
 </style>
 
@@ -71,13 +73,13 @@
         <p class="supporting-text">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
     </div>
     <div class="image-row-1">
-        <img src={image1} alt="" />
-        <img src={image2} alt="" />
-        <img src={image3} alt="" />
+        <img src={image1} alt="Men at computers" />
+        <img src={image2} alt="Meeting" />
+        <img src={image3} alt="Office" />
     </div>
     <div class=image-row-2>
-        <img src={image4} alt="" />
-        <img src={image5} alt="" />
-        <img src={image6} alt="" />
+        <img src={image4} alt="Woman at computer" />
+        <img src={image5} alt="Meeting" />
+        <img src={image6} alt="Office" />
     </div>
 </div>
