@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Hero from '../components/Hero.svelte';
-	import Newsletter from '../components/Newsletter.svelte';
 	import Clients from '../components/Clients.svelte';
 	import Introduction from '../components/Introduction.svelte';
 	import Features from '../components/Features.svelte';
 	import Pricing from '../components/Pricing.svelte';
+	import Newsletter from '../components/Newsletter.svelte';
+	import Footer from '../components/Footer.svelte';
 </script>
 
 <slot>
@@ -14,6 +15,7 @@
 	<Features />
 	<Pricing />
 	<Newsletter />
+	<Footer />
 </slot>
 
 
