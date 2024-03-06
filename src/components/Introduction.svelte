@@ -31,8 +31,8 @@
         font-size: 36px;
         font-weight: 400;
         line-height: 54px;
-
     }
+    
     .supporting-text {
         font-size: 18px;
         line-height: 27px;
