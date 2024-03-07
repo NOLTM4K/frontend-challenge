@@ -9,8 +9,8 @@
 </script>
 
 <slot>
-	<!-- <Hero />
-	<Clients /> -->
+	<Hero />
+	<Clients />
 	<Introduction />
 	<Features />
 	<Pricing />

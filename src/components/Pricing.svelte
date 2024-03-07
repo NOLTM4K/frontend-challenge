@@ -107,6 +107,7 @@
         align-items: center;
         justify-content: center;
         gap: 10px;
+        color: #1C64F2;
     }
 
     .card-button {
