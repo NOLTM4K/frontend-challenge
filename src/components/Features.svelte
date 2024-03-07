@@ -14,6 +14,12 @@
         gap: 48px;
     }
 
+    @media only screen and (max-width: 600px) {
+        .features-container {
+            padding: 48px 0;
+        }
+    }
+
     .heading-container {
         display: flex;
         flex-direction: column;
@@ -44,7 +50,13 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        max-width: 400px;
+        max-width: 394px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .feature {
+            max-width: 476px;
+        }
     }
 
     .icon {

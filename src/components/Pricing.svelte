@@ -25,6 +25,12 @@
         gap: 48px;
     }
 
+    @media only screen and (max-width: 600px) {
+        .pricing-container {
+            padding: 64px 0 48px 0;
+        }
+    }
+
     .heading-container {
         display: flex;
         flex-direction: column;
@@ -77,7 +83,14 @@
         border: 1px solid #E5E7EB;
         background: #FFF;
         box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+        width: 400px;
         min-width: 350px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .card-container {
+            width: 100%;
+        }
     }
 
     .card-container-center {
@@ -132,7 +145,7 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        min-width: 350px;
+        min-width: 320px;
     }
 
     .card-feature {

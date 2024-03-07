@@ -21,6 +21,12 @@
         gap: 48px;
     }
 
+    @media only screen and (max-width: 600px) {
+        .introduction-container {
+            padding: 48px 0;
+        }
+    }
+
     .introduction-content {
         display: flex;
         flex-direction: column;
@@ -37,6 +43,14 @@
         font-size: 18px;
         line-height: 27px;
         color: #6B7280;
+        max-width: 891px;
+    }
+
+    .image-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: auto 16px;
     }
 
     .image-row-1 {
@@ -44,7 +58,7 @@
         grid-template-columns: 50% 25% 25%;
         height: 240px;
         max-width: 1280px;
-        grid-gap: 10px;
+        grid-gap: 16px;
         justify-content: center;
         align-items: center;
     }
@@ -54,7 +68,7 @@
         grid-template-columns: 25% 50% 25%;
         height: 240px;
         max-width: 1280px;
-        grid-gap: 10px;
+        grid-gap: 16px;
         justify-content: center;
         align-items: center;
     }
@@ -72,14 +86,16 @@
         <h2 class="heading">We didn't reinvent the wheel</h2>
         <p class="supporting-text">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
     </div>
-    <div class="image-row-1">
-        <img src={image1} alt="Men at computers" />
-        <img src={image2} alt="Meeting" />
-        <img src={image3} alt="Office" />
-    </div>
-    <div class=image-row-2>
-        <img src={image4} alt="Woman at computer" />
-        <img src={image5} alt="Meeting" />
-        <img src={image6} alt="Office" />
+    <div class="image-rows">
+        <div class="image-row-1">
+            <img src={image1} alt="Men at computers" />
+            <img src={image2} alt="Meeting" />
+            <img src={image3} alt="Office" />
+        </div>
+        <div class=image-row-2>
+            <img src={image4} alt="Woman at computer" />
+            <img src={image5} alt="Meeting" />
+            <img src={image6} alt="Office" />
+        </div>
     </div>
 </div>

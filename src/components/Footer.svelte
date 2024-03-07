@@ -19,6 +19,16 @@
         width: 100%;
         color: #6B7280;
     }
+
+    @media only screen and (max-width: 600px) {
+        .footer-container {
+            padding: 48px 0;
+        }
+    }
+
+    .copyright {
+        flex: 1;
+    }
     
     .icon-container {
         display: flex;

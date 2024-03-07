@@ -8,7 +8,7 @@
 <style>
     .clients-container {
         display: flex;
-        padding: 96px 80px;
+        padding: 48px 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;

@@ -8,7 +8,7 @@
     .hero-container {
         display: flex;
         height: 748px;
-        padding-top: 96px;
+        padding: 114px 0 18px 0;
         gap: 10px;
         flex-direction: row;
         align-items: center;
@@ -47,6 +47,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0px;
     }
 
     .flex-image {
