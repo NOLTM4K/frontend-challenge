@@ -104,7 +104,7 @@
                 <img src={mailIcon} alt="Mail Icon" class="icon"/>
                 <input type="email" placeholder="Enter your email" />
             </div>
-            <button class="btn-subscribe" on:click={handleSubscribe}>Subscribe</button>
+            <!-- <button class="btn-subscribe" on:click={handleSubscribe}>Subscribe</button> -->
         </div>
         <div class="email-helper-text">
             <p>We care about the protection of your data. Read our <span class="privacy-policy">Privacy Policy</span>.</p>

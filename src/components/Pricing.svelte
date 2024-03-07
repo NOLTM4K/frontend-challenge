@@ -1,6 +1,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { writable } from 'svelte/store';
     import toggle from '$lib/images/pricing-toggle.png';
     import arrowNarrowRight from '$lib/images/pricing-arrow-narrow-right.png';
     import pricingFeature1 from '$lib/images/pricing-credit-card.png';
@@ -32,9 +31,9 @@
         const response = await fetch('/prices/' + interval, {
             method: 'POST',
             body: JSON.stringify(interval),
-                headers: {
-                    'content-type': 'application/json'
-                }
+            headers: {
+                'content-type': 'application/json'
+            }
         });
         data = await response.json();
         console.log(data);
