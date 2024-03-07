@@ -64,6 +64,7 @@
         align-items: flex-end;
         justify-content: center;
         gap: 40px;
+        flex-wrap: wrap;
     }
 
     .card-container {
@@ -76,6 +77,7 @@
         border: 1px solid #E5E7EB;
         background: #FFF;
         box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.10), 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+        min-width: 350px;
     }
 
     .card-container-center {
@@ -115,7 +117,7 @@
         padding: 10px 20px;
         justify-content: center;
         align-items: center;
-        width: 336px;
+        max-width: 336px;
         height: 41px;
         border-radius: 8px;
         background: #111928;
@@ -130,6 +132,7 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        min-width: 350px;
     }
 
     .card-feature {

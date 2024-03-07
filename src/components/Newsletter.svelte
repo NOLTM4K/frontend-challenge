@@ -48,7 +48,7 @@
 
     .email-input {
         display: flex;
-        width: 344px;
+        max-width: 344px;
         padding: 14px 16px;
         border-radius: 8px 0px 0px 8px;
         border: 1px solid #E5E7EB;
