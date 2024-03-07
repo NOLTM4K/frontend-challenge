@@ -179,23 +179,23 @@
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature4} alt="Paper airplane" />
-                    <p class="feature-text">Get hundreds of feature updates</p>
+                    <p class="feature-text strikethrough">Get hundreds of feature updates</p>
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature5} alt="Fire" />
-                    <p class="feature-text">Payouts to your bank account</p>
+                    <p class="feature-text strikethrough">Payouts to your bank account</p>
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature6} alt="Presentation chart" />
-                    <p class="feature-text">Financial reconciliation and reporting</p>
+                    <p class="feature-text strikethrough">Financial reconciliation and reporting</p>
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature7} alt="Chat bubble" />
-                    <p class="feature-text">24×7 phone, chat, and email support</p>
+                    <p class="feature-text strikethrough">24×7 phone, chat, and email support</p>
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature8} alt="Cube" />
-                    <p class="feature-text">Robust developer platform</p>
+                    <p class="feature-text strikethrough">Robust developer platform</p>
                 </div>
             </div>
         </div>
@@ -231,15 +231,15 @@
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature6} alt="Presentation chart" />
-                    <p class="feature-text">Financial reconciliation and reporting</p>
+                    <p class="feature-text strikethrough">Financial reconciliation and reporting</p>
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature7} alt="Chat bubble" />
-                    <p class="feature-text">24×7 phone, chat, and email support</p>
+                    <p class="feature-text strikethrough">24×7 phone, chat, and email support</p>
                 </div>
                 <div class="card-feature">
                     <img class="feature-image" src={pricingFeature8} alt="Cube" />
-                    <p class="feature-text">Robust developer platform</p>
+                    <p class="feature-text strikethrough">Robust developer platform</p>
                 </div>
             </div>
         </div>
