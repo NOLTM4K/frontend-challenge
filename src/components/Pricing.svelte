@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+    import { writable } from 'svelte/store';
     import toggle from '$lib/images/pricing-toggle.png';
     import arrowNarrowRight from '$lib/images/pricing-arrow-narrow-right.png';
     import pricingFeature1 from '$lib/images/pricing-credit-card.png';
@@ -9,7 +11,41 @@
     import pricingFeature6 from '$lib/images/pricing-presentation-chart-bar.png';
     import pricingFeature7 from '$lib/images/pricing-chat.png';
     import pricingFeature8 from '$lib/images/pricing-cube.png';
-    
+
+    interface PriceData {
+        starter: Plan
+        pro: Plan
+        platinum: Plan
+    }
+    interface Plan {
+        amount: string
+        unit: string
+    }
+
+    let data: PriceData;
+
+    let selectedIntervalMonthly = true;
+
+    const fetchPrices = async () => {
+        let interval = (selectedIntervalMonthly === true ? 'monthly' : 'yearly');
+        console.log(interval);
+        const response = await fetch('/prices/' + interval, {
+            method: 'POST',
+            body: JSON.stringify(interval),
+                headers: {
+                    'content-type': 'application/json'
+                }
+        });
+        data = await response.json();
+        console.log(data);
+        // let jsonObj = await JSON.parse(JSON.stringify(response));
+        // data = jsonObj as PriceData;
+    }
+
+    onMount(async()=> {
+        await fetchPrices();
+    });
+
 </script>
 
 <style>
@@ -159,6 +195,10 @@
         text-decoration: line-through;
         color: #6B7280;
     }
+
+    .priceToggle {
+        display: none;
+    }
 </style>
 
 <div class="pricing-container">
@@ -168,13 +208,15 @@
         <div class="switch">
             <p class="toggle-text">Monthly</p>
             <img src={toggle} alt="Toggle" class="toggle-icon" />
+            <input class="priceToggle" type="checkbox" bind:value={selectedIntervalMonthly} on:change={fetchPrices}>
             <p class="toggle-text">Yearly</p>
         </div>
     </div>
+    {#if data}
     <div class="pricing-cards">
         <div class="card-container">
             <h4 class="card-title">Starter</h4>
-            <h3 class="card-price">$29</h3>
+            <h3 class="card-price">{(data.starter.unit === 'USD' ? '$' : '€') + data.starter.amount}</h3>
             <div class="cta-container">
                 <p class="cta-text">Go to annual plan</p>
                 <img class="cta-icon" src={arrowNarrowRight} alt="Arrow" />
@@ -218,7 +260,7 @@
         <div class="card-container card-container-center">
             <div class="card-badge">Most popular</div>
             <h4 class="card-title">Pro</h4>
-            <h3 class="card-price">$199</h3>
+            <h3 class="card-price">{(data.pro.unit === 'USD' ? '$' : '€') + data.pro.amount}</h3>
             <div class="cta-container">
                 <p class="cta-text">Go to annual plan</p>
                 <img class="cta-icon" src={arrowNarrowRight} alt="Arrow" />
@@ -261,7 +303,7 @@
         </div>
         <div class="card-container">
                 <h4 class="card-title">Platinum</h4>
-                <h3 class="card-price">$599</h3>
+                <h3 class="card-price">{(data.platinum.unit === 'USD' ? '$' : '€') + data.platinum.amount}</h3>
                 <div class="cta-container">
                     <p class="cta-text">Go to annual plan</p>
                     <img class="cta-icon" src={arrowNarrowRight} alt="Arrow" />
@@ -303,5 +345,7 @@
             </div>
         </div>
     </div>
-
+    {:else}
+    <p>Loading...</p>
+    {/if}
 </div>
