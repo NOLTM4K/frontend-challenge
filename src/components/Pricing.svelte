@@ -27,18 +27,13 @@
 
     const fetchPrices = async () => {
         let interval = (selectedIntervalMonthly === true ? 'monthly' : 'yearly');
-        console.log(interval);
         const response = await fetch('/prices/' + interval, {
-            method: 'POST',
-            body: JSON.stringify(interval),
+            method: 'GET', // Changed from 'POST' to 'GET'
             headers: {
                 'content-type': 'application/json'
             }
         });
         data = await response.json();
-        console.log(data);
-        // let jsonObj = await JSON.parse(JSON.stringify(response));
-        // data = jsonObj as PriceData;
     }
 
     onMount(async()=> {
