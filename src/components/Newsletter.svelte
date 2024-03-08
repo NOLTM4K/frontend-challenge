@@ -1,5 +1,47 @@
 <script lang="ts">
+    import { writable } from 'svelte/store';
     import mailIcon from '$lib/images/newsletter-mail.png';
+
+    let email: string = '';
+    let isEmailValid = writable(false);
+    let messageType = writable('');
+    let messageText = writable('');
+
+    const validateEmail = (email: string): boolean => {
+        const regex = /(\<|^)[\w\d._%+-]+@(?:[\w\d-]+\.)+(\w{2,})(\>|$)/i;
+        return regex.test(email);
+    };
+
+    const handleEmailInput = (event: Event) => {
+        email = (event.target as HTMLInputElement).value;
+        isEmailValid.set(validateEmail(email));
+        messageType.set($isEmailValid === true ? '' : 'error'); // Clear message type on input
+        messageText.set($isEmailValid === true ? '' : 'Please enter a valid email address.'); // Clear message text on input
+    };
+
+    const handleSubscribe = async () => {
+        if (!$isEmailValid) {
+            messageType.set('error');
+            messageText.set('Please enter a valid email address.');
+            return;
+        }
+
+        const response = await fetch('/validation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email })
+        });
+        const responseBody = await response.json();
+        if (response.ok) {
+            messageType.set('success');
+            messageText.set(responseBody.message);
+        } else {
+            messageType.set('error')
+            messageText.set(response.status + ' Error: ' + responseBody.error);
+        }
+    };
 </script>
 
 <style>
@@ -72,6 +114,12 @@
         height: 20px;
     }
 
+    .input-field {
+        border: none;
+        background: none;
+        outline: none;
+    }
+
     .btn-subscribe {
         border-radius: 0 8px 8px 0;
         background: #1C64F2;
@@ -91,6 +139,10 @@
         text-decoration: underline;
         color: #111928;
     }
+
+    .error {
+        color: red;
+    }
 </style>
 
 <div class="newsletter-container">
@@ -102,18 +154,15 @@
         <div class = "input-line">
             <div class="email-input">
                 <img src={mailIcon} alt="Mail Icon" class="icon"/>
-                <input type="email" placeholder="Enter your email" />
+                <input class="input-field" type="email" placeholder="Enter your email" bind:value={email} on:input={handleEmailInput}/>
             </div>
-            <!-- <button class="btn-subscribe" on:click={handleSubscribe}>Subscribe</button> -->
+            <button class="btn-subscribe" on:click={handleSubscribe} disabled={!$isEmailValid}>Subscribe</button>
         </div>
         <div class="email-helper-text">
             <p>We care about the protection of your data. Read our <span class="privacy-policy">Privacy Policy</span>.</p>
         </div>
     </div>
-    <!-- {#if isEmailAccepted}
-    <div class="email-success">Email address submitted successfully, thanks for your subscription! Please follow the instructions in the email sent to your inbox.</div>
+    {#if messageText}
+    <p class:error={$messageType === 'error'}>{$messageText}</p>
     {/if}
-    {#if email && !validateEmail(email)}
-    <div class="email-error">Invalid email. Please validate and resubmit.</div>
-    {/if} -->
 </div>
