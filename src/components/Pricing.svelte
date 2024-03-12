@@ -9,6 +9,11 @@
     import pricingFeature6 from '$lib/images/pricing-presentation-chart-bar.png';
     import pricingFeature7 from '$lib/images/pricing-chat.png';
     import pricingFeature8 from '$lib/images/pricing-cube.png';
+    import pricingFeature4Gray from '$lib/images/pricing-gray-paper-airplane.png';
+    import pricingFeature5Gray from '$lib/images/pricing-gray-fire.png';
+    import pricingFeature6Gray from '$lib/images/pricing-gray-presentation-chart-bar.png';
+    import pricingFeature7Gray from '$lib/images/pricing-gray-chat.png';
+    import pricingFeature8Gray from '$lib/images/pricing-gray-cube.png';
     
 </script>
 
@@ -194,23 +199,23 @@
                     <p class="feature-text">Comprehensive security</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature4} alt="Paper airplane" />
+                    <img class="feature-image" src={pricingFeature4Gray} alt="Paper airplane" />
                     <p class="feature-text strikethrough">Get hundreds of feature updates</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature5} alt="Fire" />
+                    <img class="feature-image" src={pricingFeature5Gray} alt="Fire" />
                     <p class="feature-text strikethrough">Payouts to your bank account</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature6} alt="Presentation chart" />
+                    <img class="feature-image" src={pricingFeature6Gray} alt="Presentation chart" />
                     <p class="feature-text strikethrough">Financial reconciliation and reporting</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature7} alt="Chat bubble" />
+                    <img class="feature-image" src={pricingFeature7Gray} alt="Chat bubble" />
                     <p class="feature-text strikethrough">24×7 phone, chat, and email support</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature8} alt="Cube" />
+                    <img class="feature-image" src={pricingFeature8Gray} alt="Cube" />
                     <p class="feature-text strikethrough">Robust developer platform</p>
                 </div>
             </div>
@@ -246,15 +251,15 @@
                     <p class="feature-text">Payouts to your bank account</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature6} alt="Presentation chart" />
+                    <img class="feature-image" src={pricingFeature6Gray} alt="Presentation chart" />
                     <p class="feature-text strikethrough">Financial reconciliation and reporting</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature7} alt="Chat bubble" />
+                    <img class="feature-image" src={pricingFeature7Gray} alt="Chat bubble" />
                     <p class="feature-text strikethrough">24×7 phone, chat, and email support</p>
                 </div>
                 <div class="card-feature">
-                    <img class="feature-image" src={pricingFeature8} alt="Cube" />
+                    <img class="feature-image" src={pricingFeature8Gray} alt="Cube" />
                     <p class="feature-text strikethrough">Robust developer platform</p>
                 </div>
             </div>
