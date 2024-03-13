@@ -8,7 +8,8 @@
     let messageText = writable('');
 
     const validateEmail = (email: string): boolean => {
-        const regex = /(\<|^)[\w\d._%+-]+@(?:[\w\d-]+\.)+(\w{2,})(\>|$)/i;
+        // regex accepting emails of format anystring@anystring.anystring
+        const regex = /^\S+@\S+\.\S+$/;
         return regex.test(email);
     };
 
@@ -26,7 +27,7 @@
             return;
         }
 
-        const response = await fetch('/validation', {
+        const response = await fetch('/api/validation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -3,7 +3,8 @@ import { json } from '@sveltejs/kit';
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
     const { email } = await request.json();
-    const regex = /(\<|^)[\w\d._%+-]+@(?:[\w\d-]+\.)+(\w{2,})(\>|$)/i;
+    // regex accepting emails of format anystring@anystring.anystring
+    const regex = /^\S+@\S+\.\S+$/;
 
     if (!regex.test(email)) {
         return json({ error: 'Invalid email format. Please update and resubmit.' }, { status: 400 });
